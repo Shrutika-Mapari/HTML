@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter Marks</title>
+<script>
+    function submit_marks() {
+    var sub1=56;
+    var sub2=67;
+    var sub3=76;
+    var sub4=65;
+    var sub5=78;
+    // var sub1 = prompt("Enter marathi marks: ");
+// var sub2 = prompt("Enter hindi marks: ");
+// var sub3 = prompt("Enter English marks: ");
+// var sub4 = prompt("Enter math marks: ");
+// var sub5 = prompt("Enter science marks: ");
+var total = sub1+sub2+sub3+sub4+sub5;
+var a=total/400
+var per  = a*100;
+var grade;
+if (per==35)
+{
+grade = 'F';
+} 
+
+else if(per>40 && per<=50){
+grade = 'D';
+}
+
+else if(per>=50 && per<=60){
+grade = 'C';
+}
+
+else if(per>=60 && per<=70){
+grade = 'B';
+}
+
+else if(per>=71 && per<=80){
+grade = 'A';
+}
+
+else{
+grade = "Invalid or Failed";
+}
+ document.write("Your Total Marks : "+ total);
+ document.write("<br>Your Percentage : "+ per);
+document.write("<br>Your Grade : "+ grade);
+				
+}
+</script>
+</head>
+ <!-- <body>
+	<h1>Enter Students Marks</h1>
+	<input type="text"  placeholder="Enter marathi Marks"><br>
+	<input type="text"  placeholder="Enter hindi Marks"><br>
+	<input type="text"  placeholder="Enter english Marks"><br>
+	<input type="text"  placeholder="Enter math Marks"><br>
+	<input type="text"  placeholder="Enter science Marks"><br>
+	
+
+	<input type="submit" onclick="submit_marks()">
+
+	<div id="demo"></div>
+</body>  -->
+</html>

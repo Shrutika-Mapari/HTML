@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<p>
+<button class="executetab">Execute </button>
+</p>
+<div class="demo" style="width:80px;height:80px;display:block;background-color:red;"></div><br>
+<div class="demo1" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div class="demo2" style="width:80px;height:80px;display:block;background-color:blue;"></div>
+</body>
+</html>
+<script>
+  
+    $(document).ready(function(){
+    $(".executetab").click(function(){
+    $(".demo").fadeOut(3000, function(){
+        // alert ("Div Disappear")
+    });
+
+    $(".demo1").fadeIn(3000, function(){
+        // alert ("Div visible!")
+    });
+
+    $(".demo").fadeOut(3000, function(){
+        // alert ("Div Disappear")
+    });
+
+    
+    
+    });
+
+    });
+    </script>

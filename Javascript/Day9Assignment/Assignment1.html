@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h4>Count Recuring values :</h4>
+    <p>arrData=[10,20,30,20,40,50,20,30,50,60,50,80,90]</p>
+    <p id="msg"></p>
+</body>
+</html>
+<script>
+    const arrData=[10,20,30,20,40,50,20,30,50,60,50,80,90];
+    //to store the key and values
+    const counts={};
+    //forEach for iterating through array
+    arrData.forEach((a)=>{
+        counts[a] = (counts[a] || 0) + 1;
+    });
+   
+    document.getElementById("msg").innerHTML = "Output : " + JSON.stringify(counts);
+    
+
+
+    
+</script>

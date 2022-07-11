@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <title>
+        Assignment 1
+    </title>
+ 
+    <style>
+        body {
+            text-align: center;
+        }
+         
+        h1 {
+            color: green;
+        }
+         
+        img {
+            position: absolute;
+            left: 400px;
+            height: 800px;
+            width: 800px;
+        }
+    </style>
+ 
+</head>
+ 
+<body>
+    <h1>Flower Gallery </h1>
+    <div id="scroll-image">
+        <img src="image1.jpg" class="test" />
+        <img src="image2.jpg" class="test" />
+        <img src="image3.jpg" class="test" />
+        <img src="image4.jpg" class="test" />
+        <img src="image5.jpg" class="test" />
+        <img src="image8.jpg" class="test" />
+      
+    </div>
+ 
+    <script>
+        startImageTransition();
+ 
+        function startImageTransition() {
+            var images = document.getElementsByClassName("test");
+ 
+            for (var i = 0; i < images.length; ++i) {
+                images[i].style.opacity = 1;
+            }
+            var top = 1;
+            var cur = images.length - 1;
+            setInterval(changeImage, 2000);
+            async function changeImage() {
+                    var nextImage = (1 + cur) % images.length;
+                // images[cur]= top + 1;
+                // images[nextImage] = top;
+                    images[cur].style.zIndex = top + 1;
+                    images[nextImage].style.zIndex = top;
+                    await transition();
+                    // images[cur]= top;
+                    // images[nextImage]= top + 1;
+                    // top = top + 1;
+                    // images[cur].style.opacity = 1;
+                    // cur = nextImage;
+ 
+                        images[cur].style.zIndex = top;
+                        images[nextImage].style.zIndex = top + 1;
+                        top = top + 1;
+                        images[cur].style.opacity = 1;
+                        cur = nextImage;
+            }
+            function transition() {
+                return new Promise(function(resolve, reject) {
+                    var del = 0.01;
+                     var id = setInterval(changeOpacity, 10);
+                    function changeOpacity() {
+                        images[cur].style.opacity -= del;
+                        if (images[cur].style.opacity <= 0) {
+                            clearInterval(id);
+                            resolve();
+                        }
+                    }
+ 
+                })
+            }
+        }
+    </script>
+ 
+</body>
+ 
+</html>

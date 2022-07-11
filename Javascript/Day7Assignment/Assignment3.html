@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="box1" class="bg-primary text-white p-5">Learning JavaScipt </div>
+    <div id="box2" class="bg-danger text-white p-5">Learning JQuery</div>
+    <p id="box3" class="bg-info text-white p-5">Hiiii,welcome to Javascript...</p>
+</body>
+</html>
+<script>
+    // when we click on div1 then show message Clicked on div1
+    $(document).ready(function(){
+        console.log("Web page loading...");
+        $("#box1").click(function(){
+         var result=$(this);
+         console.log("Clicked on div1...",result); 
+        })
+
+        $("#box3").click(function(){
+         var result=$(this);
+         console.log("Clicked on paragraph...",result); 
+
+        })
+ })
+//    when we click on paragraph then show message clicked on paragraph
+//  $(document).ready(function(){
+//         console.log("Web page loading...");
+//         $("#box3").click(function(){
+//          var result=$(this);
+//          console.log("Clicked on paragraph...",result); 
+
+//         })
+//  })
+</script>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            
+	function Palindrome()
+	{
+		var rem, temp, rev = 0;
+		//var number = promt("Enter the no: ");
+        var number=101;
+
+		temp = number;
+		while(number>0)
+		{
+			rem = number%10;
+			number = parseInt(number/10);
+			rev = rev*10+rem;
+		}
+		if(rev==temp)
+		{
+			document.write("number is Palindrome");
+		}
+		else
+		{
+			document.write("number is not palindrome");
+		}
+	}
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<p>
+<button class="fadeIntab">fadeIn </button>
+<button class="fadeOuttab">fadeOut</button>
+</p>
+<div class="demo" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div class="demo1" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div class="demo" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</body>
+</html>
+ <script>
+ 
+    $(document).ready(function(){
+    $(".fadeOuttab").click(function(){
+    $(".demo").fadeOut(1000, function(){
+        alert ("The Table disappeared completely!")
+    
+        
+    });
+    
+    });
+    
+    $(".fadeIntab").click(function(){
+    $(".demo1").fadeIn(1000, function(){
+        alert ("The Table is visible!")
+    });
+    
+    });
+     
+    }); 
+    </script> 
+ 
+<!-- <script>
+ 
+    $(document).ready(function(){
+    $(".fadeOuttab").click(function(){
+    $(".demo1").fadeOut(1000, function(){
+        alert ("The Table disappeared completely!")
+    
+        
+    });
+    
+    });
+    
+    $(".fadeIntab").click(function(){
+    $(".demo").fadeIn(1000, function(){
+        alert ("The Table is visible!")
+    });
+    
+    });
+     
+    }); 
+    </script>
+-->
