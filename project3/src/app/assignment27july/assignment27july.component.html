@@ -1,0 +1,46 @@
+<!-- <p>assignment27july works!</p> -->
+<!-- <h1 style="background-color:lightgray;text-align:center;">Assignment 1</h1>
+<div class="Container">
+    <div class="row mt-3">
+        <div class="col-5"></div>
+        <div class="col-5">
+            <h2>List Of Name</h2>
+            <div>
+                <h3 [ngStyle]="{'color':nameColor}">Shruti</h3>
+                <h3 [ngStyle]="{'color':nameColor}">Adhira</h3>
+                <h3 [ngStyle]="{'color':nameColor}">Shrisha</h3>
+                <h3 [ngStyle]="{'color':nameColor}">Trisha</h3>
+                <h3 [ngStyle]="{'color':nameColor}">Vedanti</h3>
+                <h3 [ngStyle]="{'color':nameColor}">Shruti</h3>
+            </div>
+            <div class="form-group" >
+                <button class="btn-primary" (click)="onBlue()">Blue</button>
+                <button class="m-2 btn-success" (click)="onGreen()">Green</button>
+                <button class="m-2 btn-danger" (click)="onRed()">Red</button>
+            </div>
+        </div>
+    </div >
+</div> -->
+
+<!-- 2nd way by using ngClass -->
+<div class="Container">
+    <div class="row mt-3">
+        <div class="col-5"></div>
+        <div class="col-5">
+            <h3>List Of Name</h3>
+            <div>
+                <h5 [ngClass]="{'text-danger':selectedColor==='Red', 'text-success':selectedColor==='Green', 'text-primary':selectedColor==='Blue'}">Rahul</h5>
+                <h5 [ngClass]="{'text-danger':selectedColor==='Red', 'text-success':selectedColor==='Green', 'text-primary':selectedColor==='Blue'}">Akash</h5>
+                <h5 [ngClass]="{'text-danger':selectedColor==='Red', 'text-success':selectedColor==='Green', 'text-primary':selectedColor==='Blue'}">Asha</h5>
+                <h5 [ngClass]="{'text-danger':selectedColor==='Red', 'text-success':selectedColor==='Green', 'text-primary':selectedColor==='Blue'}">Prakash</h5>
+                <h5 [ngClass]="{'text-danger':selectedColor==='Red', 'text-success':selectedColor==='Green', 'text-primary':selectedColor==='Blue'}">Sagar</h5>
+                <h5 [ngClass]="{'text-danger':selectedColor==='Red', 'text-success':selectedColor==='Green', 'text-primary':selectedColor==='Blue'}">Yash</h5>
+            </div>
+            <div class="form-group" >
+                <button class="btn-primary" (click)="onChangeColor('Blue')">Blue</button>
+                <button class="m-2 btn-success" (click)="onChangeColor('Green')">Green</button>
+                <button class="m-2 btn-danger" (click)="onChangeColor('Red')">Red</button>
+            </div>
+        </div>
+    </div >
+</div>

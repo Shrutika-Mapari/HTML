@@ -1,0 +1,15 @@
+<!-- <p>assignment46july works!</p> -->
+<div class="container" style="text-align: center;">
+    <h5 style="background-color: rgb(245, 196, 238)">Assignment 4</h5><br><br>
+    <div>
+        <ul style="list-style-type:none">
+            <li *ngFor="let data of arrData" >
+                <span *ngIf="data.id1 ===10" class="bg-success text-white">{{data.id1}}</span>
+                <span *ngIf="data.id2 ===20" class="bg-danger text-white">{{data.id2}}</span>
+                <span *ngIf="data.id3 ===30" class="bg-warning text-white">{{data.id3}}</span>
+                <span *ngIf="data.id4 ===40" class="bg-dark text-white">{{data.id4}}</span>
+            </li>
+        </ul>
+    </div>
+
+</div>

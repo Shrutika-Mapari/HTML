@@ -1,0 +1,27 @@
+<!-- <p>assignment16july works!</p> -->
+<div class="container" style="text-align: center;">
+    <h5 style="background-color: rgb(245, 196, 238)">Assignment 1</h5><br><br>
+<div class="form-group">
+    <label>FirstName</label>
+    <input type="text" #firstname class="form-control" />
+</div>
+<div class="form-group">
+    <label>LastName</label>
+    <input type="text" #lastname class="form-control" />
+</div>
+<div class="form-group">
+FirstName:{{firstname.value}}<br>
+FirstName Length:{{firstname.value.length}}
+
+</div>
+<div class="form-group">
+    LastName:{{lastname.value}}<br>
+    LastName Length:{{lastname.value.length}}
+
+    </div>
+<div>
+    <button class="btn btn-success" (click)="onSubmit(firstname,lastname)">
+        Submit
+    </button>
+</div>
+</div>
