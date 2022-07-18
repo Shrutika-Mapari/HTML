@@ -1,0 +1,11 @@
+
+<table class="table table-stripped">
+    <th style="color:red">UserId</th>
+    <th style="color:red">UserName</th>
+    <th style="color:red">Status</th>
+    <tr *ngFor="let user of arrUser" >
+        <td>{{user.userid}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.status | status}}</td>
+    </tr>
+</table>
